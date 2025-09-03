@@ -1,5 +1,6 @@
 input {
-    width: 429px;
+    min-width: 451px;
+    flex: 1;
     height: 44px;
     gap: 8px;
     padding: 8px;
@@ -27,6 +28,7 @@ input[type="checkbox"] {
 
     width: 16px;
     height: 16px;
+    min-width: 16px;
     border-radius: 6px;
 
     &:checked {

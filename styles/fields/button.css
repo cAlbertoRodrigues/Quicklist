@@ -11,8 +11,18 @@ button {
     
     font: var(--label);
     color: var(--always-white);
+    cursor: pointer;
 
     &:hover {
         background: var(--color-brand-hover);
     }
+}
+
+.remover {
+  width: 16px;
+  height: 16px;
+  background: url('../../assets/icons/trash.svg') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
 }

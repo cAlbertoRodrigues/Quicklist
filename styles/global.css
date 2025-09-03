@@ -2,15 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    img{
+        display: block;
+        max-width: 100%
+        }
+}
+
+body {
+    background: var(--background-primary);
+    color: var(--content-primary);
+}
+
+.page-tittle {
+    font: var(--title);
+    margin: 16px 0 20px;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin: 1rem auto auto 3rem;
-    gap: 8px;
-    
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 :root {
