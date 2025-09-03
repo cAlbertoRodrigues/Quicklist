@@ -1,6 +1,9 @@
 const input = document.getElementById('itemInput');
 const addBtn = document.getElementById('addBtn');
 const lista  = document.getElementById('lista'); 
+const alertEl = document.querySelector('.alert');
+
+let alerTimer;
 
 
 function criarItem(texto) {
@@ -41,4 +44,42 @@ lista.addEventListener('keydown', (e) => {
     e.preventDefault();
     e.target.closest('.item').remove();
   }
+});
+
+function showAlert(msg = 'O item foi removido da lista', timeout = 2500){
+  alertEl.querySelector('.texto').textContent = msg;
+  alertEl.classList.add('is-open');
+  clearTimeout(alertTimer);
+  alertTimer = setTimeout(hideAlert, timeout);
+}
+
+function hideAlert(){
+  alertEl.classList.remove('is-open');
+}
+
+alertEl.addEventListener('click', (e) => {
+  if (e.target.closest('.fechar')) hideAlert();
+});
+
+alertEl.addEventListener('keydown', (e) => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.fechar')){
+    e.preventDefault();
+    hideAlert();
+  }
+});
+
+lista.addEventListener('click', (e) => {
+  const btn = e.target.closest('.remover');
+  if (!btn) return;
+
+  btn.closest('.item').remove();
+  showAlert();
+});
+
+lista.addEventListener('click', (e) => {
+  const btn = e.target.closest('.remover');
+  if (!btn) return;
+
+  btn.closest('.item').remove();
+  showAlert();
 });

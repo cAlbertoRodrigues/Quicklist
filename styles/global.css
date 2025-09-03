@@ -28,6 +28,13 @@ body {
     padding: 0 24px;
 }
 
+.texto {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+
 :root {
 
     --background-primary: #F4F5FB;
