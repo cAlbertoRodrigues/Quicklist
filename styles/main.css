@@ -7,3 +7,8 @@
   margin-top: 8px;
 }
 
+@media (max-width: 430px) {
+  .back {
+    margin-top: 16px;
+  }
+}

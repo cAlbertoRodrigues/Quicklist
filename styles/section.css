@@ -5,3 +5,10 @@ section {
     gap: 1rem;
     color: var(--content-primary);
 }
+
+@media (max-width: 430px) {
+    section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

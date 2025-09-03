@@ -48,3 +48,9 @@
     color: var(--always-white);
   }
 }
+
+@media (max-width: 430px) {
+  .item {
+    width: 100%;
+  }
+}
