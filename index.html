@@ -10,17 +10,30 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <header>
-            <img src="assets/logo.png" alt="Logo">
+    <header class="container">
+            <img src="assets/logo.png" alt="Logo" class="logo">
     </header>
-    <div class="container">
+    <main class="container">
+        <a href="#" class="back">
             <img src="/assets/icons/back.svg" alt="">
-            <h3>Voltar</h3>
-        </div>
-        <h1 class="container">Compras da semana</h1>
-    <section>
-        <input type="text" placeholder="Adicione um novo item">
-        <button>Adicionar item</button>
+            Voltar
+        </a>
+
+        <h1 class="page-tittle">Compras da semana</h1>
+        
+    <section class="margin-bottom-40">
+        <input id="itemInput" type="text" placeholder="Adicione um novo item">
+        <button class="btn" id="addBtn">Adicionar item</button>
     </section>
+
+    <div id="lista" class="lista">
+        <div class="item">
+            <input type="checkbox" />
+            <span class="texto">Pão de forma</span>
+            <div class="remover"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </main>
 </body>
 </html>
